@@ -1,0 +1,91 @@
+.team {
+  @extend %padding-top-bottom;
+  background-color: $last-background-color;
+
+  .container {
+    @extend %container;
+  }
+
+  .team-item {
+    @extend %h2;
+    @extend %h1-3;
+  }
+}
+
+.team-list {
+  @include display();
+  @extend %list;
+
+  .item + .item {
+    margin-left: 30px;
+  }
+
+  .item {
+    width: calc((100% - 90px) / 4);
+    background-color: $hero-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+}
+
+.item-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  justify-content: center;
+
+  .list-item {
+    color: $title-text-color;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+
+    @extend %h1-3;
+    @extend %h3;
+  }
+
+  .item-text {
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+.team-socials {
+  display: flex;
+  width: 206px;
+  height: 44px;
+
+  @extend %centred;
+  @extend %list;
+
+  .socials-item + .socials-item {
+    margin-left: 10px;
+  }
+
+  .social-link {
+    @include display();
+    color: #afb1b8;
+    padding: 0;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $hero-color;
+    @include transitioned(color);
+    @include transitioned(background-color);
+
+    &:hover,
+    &:focus {
+      color: $hero-color;
+      background-color: $accent-color;
+    }
+
+    .icon {
+      fill: currentColor;
+    }
+  }
+}

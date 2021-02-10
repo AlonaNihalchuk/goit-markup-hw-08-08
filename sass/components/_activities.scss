@@ -1,0 +1,50 @@
+.activities {
+  padding-bottom: 94px;
+  padding-top: 0;
+  background-color: $hero-color;
+
+  .container {
+    @extend %container;
+  }
+
+  .action-title {
+    @extend %h2;
+    @extend %h1-3;
+  }
+
+  .list {
+    display: flex;
+    width: 1170px;
+    @extend %list;
+
+    .item + .item {
+      margin-left: 30px;
+    }
+  }
+}
+
+.thumb {
+  display: flex;
+  position: relative;
+
+  .label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    // min-height: 70px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+
+    font-weight: 400;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $hero-color;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  p {
+    @extend %p;
+  }
+}

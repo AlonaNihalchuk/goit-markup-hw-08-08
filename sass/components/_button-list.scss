@@ -1,0 +1,59 @@
+.visually-hidden {
+  @extend %visually-hidden;
+}
+
+.main-container {
+  @extend %container;
+  @extend %padding-top-bottom;
+  background-color: $hero-color;
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    @extend %list;
+
+    .item + .item {
+      margin-left: 8px;
+    }
+  }
+
+  .button {
+    @extend %button;
+    @include transitioned(color);
+    @include transitioned(background-color);
+    @include transitioned(box-shadow);
+
+    &:hover,
+    &:focus {
+      color: $hero-color;
+      background-color: $accent-color;
+      box-shadow: $box-shadow;
+    }
+  }
+
+  .first {
+    min-width: 73px;
+    @extend %button;
+  }
+
+  .second {
+    min-width: 128px;
+    @extend %button;
+  }
+
+  .third {
+    min-width: 145px;
+    @extend %button;
+  }
+
+  .fourth {
+    min-width: 103px;
+    @extend %button;
+  }
+
+  .fifth {
+    min-width: 130px;
+    @extend %button;
+  }
+}

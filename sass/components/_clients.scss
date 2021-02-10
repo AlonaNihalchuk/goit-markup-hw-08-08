@@ -1,0 +1,46 @@
+.clients {
+  @extend %padding-top-bottom;
+
+  .container {
+    @extend %container;
+  }
+
+  .heading-clients {
+    @extend %h2;
+    @extend %h1-3;
+  }
+}
+
+.list-clients {
+  display: flex;
+  @extend %list;
+
+  .link-clients {
+    @include display();
+
+    width: 170px;
+    height: 90px;
+
+    border: 1px solid $link-color;
+    border-radius: 4px;
+
+    color: $link-color;
+
+    @include transitioned(color);
+    @include transitioned(border);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      border: 1px solid $accent-color;
+    }
+  }
+
+  .item-clients + .item-clients {
+    margin-left: 30px;
+  }
+
+  .item-clients .icon {
+    fill: currentColor;
+  }
+}

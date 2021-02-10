@@ -1,0 +1,80 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  @extend %list;
+}
+
+.list-element {
+  width: calc((100% - 60px) / 3);
+  background: $hero-color;
+  outline: 1px solid $button-color;
+  margin-bottom: 30px;
+
+  &:not(:nth-last-child(3n + 1)) {
+    margin-right: 30px;
+  }
+}
+
+.link-element {
+  display: block;
+  @include transitioned(box-shadow);
+  @extend %a;
+
+  &:hover,
+  &:focus {
+    box-shadow: $box-shadow;
+  }
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.55;
+
+  color: $hero-color;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  @include transitioned(transform);
+
+  .link-element:hover &,
+  .link-element:focus & {
+    transform: translatey(-100%);
+  }
+}
+
+.portfolio-element {
+  padding: 20px 24px;
+}
+
+.portfolio-item {
+  @extend %h2;
+  @extend %h1-3;
+  color: $title-text-color;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: left;
+
+  margin-bottom: 4px;
+}
+
+.portfolio-text {
+  color: $primery-text-color;
+
+  font-size: 16px;
+  line-height: 1.87;
+  @extend %p;
+}

@@ -1,0 +1,158 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $secondary-background-color;
+
+  .container {
+    @include display($type: flex, $content: none, $item: baseline);
+    @extend %container;
+  }
+}
+
+.footer-contacts {
+  min-width: 231px;
+  margin-right: 70px;
+
+  .information {
+    margin-bottom: 9px;
+    color: $hero-color;
+  }
+
+  .address {
+    @extend %list;
+    flex-direction: column;
+  }
+
+  .mail {
+    margin-bottom: 9px;
+
+    color: $last-text-color;
+    @extend %a;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+
+  .telefon {
+    color: $last-text-color;
+    @extend %a;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.footer-sociallinks {
+  margin-right: 93px;
+
+  .social-text {
+    font-weight: 700;
+    line-height: 1.14;
+
+    color: $hero-color;
+    margin-bottom: 20px;
+  }
+
+  .list {
+    display: flex;
+    width: 206px;
+    height: 44px;
+    @extend %list;
+  }
+
+  .social-item + .social-item {
+    margin-left: 10px;
+  }
+
+  .icon-link {
+    @include display();
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    @include transitioned(background-color);
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color;
+    }
+  }
+}
+
+.subscribe-container {
+  min-width: 570px;
+  min-height: 86px;
+
+  .subscribe-text {
+    font-family: inherit;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    color: $hero-color;
+    margin-bottom: 20px;
+    @extend %p;
+  }
+
+  .subscribe-form {
+    display: flex;
+  }
+
+  .subscribe-input {
+    width: 358px;
+    height: 50px;
+
+    padding: 15px 16px;
+    margin-right: 12px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px $second-box-shadow;
+    border-radius: 4px;
+
+    background-color: $secondary-background-color;
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      color: $last-text-color;
+    }
+  }
+
+  .subscribe-button {
+    width: 200px;
+    height: 50px;
+    background-color: $accent-color;
+    color: $hero-color;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px $second-box-shadow;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 29px;
+
+    text-align: start;
+  }
+
+  .button-container {
+    position: relative;
+    width: 200px;
+    height: 50px;
+  }
+
+  .subscribe-icon {
+    position: absolute;
+    top: 13px;
+    right: 28px;
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,36 @@
+.page-header {
+  position: relative;
+  background-color: $hero-color;
+  border-bottom: 1px solid $button-color;
+}
+
+.header-container {
+  // outline: 1px solid darkmagenta;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  // @media screen and (min-width: 480px) {
+  //   width: 480px;
+  // }
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+
+  // @media screen and (min-width: 480px) {
+  //   width: 480px;
+  // }
+
+  .site-nav {
+    display: none;
+  }
+}
+
+.contacts {
+  display: none;
+}
