@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
     <title>Документ</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -19,7 +19,7 @@
   <body>
     <!-- Шапка сайта -->
     <header class="page-header">
-      <div class="header-container">
+      <div class="container">
         <nav class="nav-container">
           <a href="/" class="logo">Web<span class="logo-dark">Studio</span></a>
           <button
@@ -27,9 +27,9 @@
             class="menu-button"
             aria-expanded="false"
             aria-controls="menu-container"
+            data-menu-button
           >
             <svg
-              class="menu-icons"
               width="40"
               height="40"
               aria-label="Переключатель мобильного меню"
@@ -44,7 +44,7 @@
               ></use>
             </svg>
 
-            <div class="menu-container" id="menu-container"></div>
+            <div class="menu-container" id="menu-container" data-menu></div>
           </button>
 
           <ul class="list site-nav">
@@ -90,13 +90,13 @@
       </section>
 
       <!-- Характеристики -->
-      <section class="features">
-        <div class="container featyres">
+      <section class="section features">
+        <div class="container">
           <h2 class="visually-hidden">Характеристики</h2>
           <ul class="list list-positioned">
             <li class="item feture icon-antenna">
               <div class="icon-background">
-                <svg class="" width="70" height="70">
+                <svg class="features-icon" width="70" height="70">
                   <use href="./images/sprite.svg#icon-antenna-1"></use>
                 </svg>
               </div>
@@ -196,12 +196,13 @@
       </section>
 
       <!-- Команда -->
-      <section class="team">
+      <section class="section team">
         <div class="container">
           <h2 class="team-item">Наша команда</h2>
           <ul class="list team-list">
             <li class="item">
               <img
+                class="team-photo"
                 src="./images/ihor.jpg"
                 alt="мужчина в очках и темной рубашке"
                 width="270"
@@ -560,6 +561,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
