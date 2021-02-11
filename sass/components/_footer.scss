@@ -1,49 +1,45 @@
-// .footer {
-//   padding-top: 60px;
-//   padding-bottom: 60px;
-//   background-color: $secondary-background-color;
+.footer {
+  background-color: $secondary-background-color;
+  text-align: center;
 
-//   .container {
-//     @include display($type: flex, $content: none, $item: baseline);
-//     @extend %container;
-//   }
-// }
+  .logo {
+    margin-bottom: 20px;
+  }
+}
+
+.information {
+  margin-bottom: 8px;
+  color: $hero-color;
+}
+
+.address {
+  @extend %list;
+}
+
+.mail {
+  margin-bottom: 8px;
+  color: $last-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.telefon {
+  color: $last-text-color;
+  margin-bottom: 60px;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
 
 // .footer-contacts {
 //   min-width: 231px;
 //   margin-right: 70px;
 
-//   .information {
-//     margin-bottom: 9px;
-//     color: $hero-color;
-//   }
-
-//   .address {
-//     @extend %list;
-//     flex-direction: column;
-//   }
-
-//   .mail {
-//     margin-bottom: 9px;
-
-//     color: $last-text-color;
-//     @extend %a;
-
-//     &:hover,
-//     &:focus {
-//       color: $accent-color;
-//     }
-//   }
-
-//   .telefon {
-//     color: $last-text-color;
-//     @extend %a;
-
-//     &:hover,
-//     &:focus {
-//       color: $accent-color;
-//     }
-//   }
 // }
 
 // .footer-sociallinks {

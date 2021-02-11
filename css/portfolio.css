@@ -1,6 +1,7 @@
-.logo {
-  text-decoration: none;
-  display: block;
+.address {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 body {
@@ -11,6 +12,11 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+}
+
+a {
+  text-decoration: none;
+  display: block;
 }
 
 img,
@@ -80,5 +86,37 @@ h3 {
 
 .logo-white {
   color: #ffffff;
+}
+
+.footer {
+  background-color: #2f303a;
+  text-align: center;
+}
+
+.footer .logo {
+  margin-bottom: 20px;
+}
+
+.information {
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.mail {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mail:hover, .mail:focus {
+  color: #2196f3;
+}
+
+.telefon {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 60px;
+}
+
+.telefon:hover, .telefon:focus {
+  color: #2196f3;
 }
 /*# sourceMappingURL=portfolio.css.map */

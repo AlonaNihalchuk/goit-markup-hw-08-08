@@ -1,9 +1,4 @@
-.logo {
-  text-decoration: none;
-  display: block;
-}
-
-.features .list, .team-list {
+.features .list, .team-list, .item-container .team-socials, .list-clients, .address {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -17,6 +12,11 @@
   margin: -1px;
 }
 
+.item-container .team-socials {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   background-color: #ffffff;
   color: #757575;
@@ -25,6 +25,11 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+}
+
+a {
+  text-decoration: none;
+  display: block;
 }
 
 img,
@@ -148,9 +153,168 @@ h3 {
   line-height: 1.17;
 }
 
+.team-list .item {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.team-list .item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .team-photo {
   width: 450px;
+}
+
+.item-container {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.item-container .list-item {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.19;
+  color: #212121;
+}
+
+.item-container .item-text {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.item-container .team-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 206px;
+  height: 44px;
+}
+
+.social-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #afb1b8;
+  padding: 0;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover, .social-link:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+}
+
+.social-link .icon {
+  fill: currentColor;
+}
+
+.heading-clients {
+  color: #212121;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
   margin-bottom: 30px;
+}
+
+.list-clients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
+}
+
+.item-clients {
+  width: calc((100% - 60px) / 2);
+  margin: 15px;
+}
+
+.item-clients .icon {
+  fill: currentColor;
+}
+
+.link-clients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-clients:hover, .link-clients:focus {
+  color: #2196f3;
+  border: 1px solid #2196f3;
+}
+
+.footer {
+  background-color: #2f303a;
+  text-align: center;
+}
+
+.footer .logo {
+  margin-bottom: 20px;
+}
+
+.information {
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.mail {
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.mail:hover, .mail:focus {
+  color: #2196f3;
+}
+
+.telefon {
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 60px;
+}
+
+.telefon:hover, .telefon:focus {
+  color: #2196f3;
 }
 
 .menu-button {
