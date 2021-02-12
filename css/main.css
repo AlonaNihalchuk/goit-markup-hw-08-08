@@ -1,4 +1,4 @@
-.features .list, .team-list, .item-container .team-socials, .list-clients, .address, .social.list, .site-nav, .contacts {
+.features .list, .team-list, .item-container .team-socials, .list-clients, .address, .social.list, .site-nav, .contacts, .networks {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -764,6 +764,11 @@ h3 {
   padding: 0;
   border: none;
   background-color: transparent;
+  fill: currentColor;
+}
+
+.menu-button:hover, .menu-button:focus {
+  fill: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
@@ -824,7 +829,6 @@ h3 {
 
 .contacts-link {
   display: block;
-  font-size: 34px;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -841,10 +845,54 @@ h3 {
 
 .contacts .icon-between {
   color: #757575;
+  font-size: 28px;
 }
 
 .contacts .icon-between.accent {
   color: #2196f3;
+  font-size: 34px;
+}
+
+.networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .networks {
+    display: none;
+  }
+}
+
+.networks-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.networks-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-left: auto;
+  letter-spacing: 0.02em;
+}
+
+.networks-text {
+  color: #2196f3;
+}
+
+.networks-line {
+  margin-left: 10px;
+  color: rgba(33, 33, 33, 0.2);
 }
 
 .container {

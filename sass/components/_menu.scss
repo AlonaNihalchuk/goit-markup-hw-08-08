@@ -46,6 +46,12 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  fill: currentColor;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -108,7 +114,6 @@
   &-link {
     display: block;
     @extend %mobile-link-font;
-    font-size: 34px;
 
     // color: $primery-text-color;
     @include transitioned(color);
@@ -127,13 +132,43 @@
 
   .icon-between {
     color: $primery-text-color;
+    font-size: 28px;
   }
 
   .icon-between.accent {
     color: $accent-color;
+    font-size: 34px;
+  }
+}
+
+.networks {
+  @include display($content: start);
+  @extend %list;
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 
-  // &-icon {
-  //   fill: currentColor;
-  // }
+  &-item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &-link {
+    display: flex;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    margin-left: auto;
+
+    letter-spacing: 0.02em;
+  }
+
+  &-text {
+    color: $accent-color;
+  }
+
+  &-line {
+    margin-left: 10px;
+    color: rgba(33, 33, 33, 0.2);
+  }
 }
