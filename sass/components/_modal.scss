@@ -1,12 +1,19 @@
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  // z-index: 1;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%) scale(1);
   // @include transitioned(transform);
 
-  width: 528px;
+  position: relative;
+  max-width: 450px;
+  width: 100%;
+  // max-height: 609px;
+  // height: 100%;
+
   padding: 40px;
+  margin: auto;
 
   background-color: $hero-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
@@ -15,6 +22,7 @@
 }
 
 .modal-button {
+  z-index: 2;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -33,7 +41,8 @@
 }
 
 .form {
-  width: 448px;
+  // width: 100%;
+  // width: 450px;
   @extend %centred;
   padding: 0;
 }
@@ -106,6 +115,7 @@
 }
 
 .link-policy {
+  display: inline;
   text-decoration-line: underline;
   color: $accent-color;
   text-decoration-skip-ink: none;
@@ -113,7 +123,8 @@
 
 .button.submit {
   display: block;
-  min-width: 200px;
+  max-width: 200px;
+  width: 100%;
   background: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   letter-spacing: 0.06em;
@@ -130,8 +141,11 @@
 }
 
 .form-label {
-  @include display();
+  display: flex;
+  // @include display();
   margin-bottom: 30px;
+  font-size: 12px;
+  line-height: 1.16;
 }
 
 .form-container {

@@ -41,6 +41,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.is-open {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   display: block;
@@ -482,14 +486,33 @@ h3 {
   margin-left: 10px;
 }
 
+.backdrop {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 94px;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  width: 528px;
+  position: relative;
+  max-width: 450px;
+  width: 100%;
   padding: 40px;
+  margin: auto;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -497,6 +520,7 @@ h3 {
 }
 
 .modal-button {
+  z-index: 2;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -514,7 +538,6 @@ h3 {
 }
 
 .form {
-  width: 448px;
   padding: 0;
 }
 
@@ -616,6 +639,7 @@ h3 {
 }
 
 .link-policy {
+  display: inline;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #2196f3;
@@ -624,7 +648,8 @@ h3 {
 
 .button.submit {
   display: block;
-  min-width: 200px;
+  max-width: 200px;
+  width: 100%;
   background: #2196f3;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -645,13 +670,9 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-bottom: 30px;
+  font-size: 12px;
+  line-height: 1.16;
 }
 
 .form-container {
@@ -713,25 +734,34 @@ h3 {
 }
 
 .menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  outline: 1px solid green;
   background-color: #ffffff;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  -webkit-transition: opacity, -webkit-transition 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity, -webkit-transition 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity, transition 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity, transition 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transition 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 48px 40px;
+  text-align: center;
+  font-size: 40px;
 }
 
-.menu-container.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: initial;
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .menu-button {
@@ -752,6 +782,10 @@ h3 {
 
 .menu-button .icon-cross {
   display: none;
+}
+
+.menu-button .menu-icon {
+  z-index: 1;
 }
 
 .menu-button.is-open .icon-cross {

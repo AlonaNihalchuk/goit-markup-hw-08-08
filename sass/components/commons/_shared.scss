@@ -7,7 +7,15 @@ body {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
+
+  &.is-open {
+    overflow: hidden;
+  }
 }
+
+// body.is-open {
+//   overflow: hidden;
+// }
 
 // .visually-hidden {
 //   position: absolute;
