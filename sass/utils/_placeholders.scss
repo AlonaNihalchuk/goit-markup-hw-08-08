@@ -21,21 +21,21 @@
 //   letter-spacing: 0.02em;
 // }
 
-// %button {
-//   display: inline-block;
-//   border: 1px solid transparent;
-//   border-radius: 4px;
-//   padding: 6px 22px;
-//   text-align: center;
+%button {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
+  text-align: center;
 
-//   color: $title-text-color;
-//   background-color: $last-background-color;
+  color: $title-text-color;
+  background-color: $last-background-color;
 
-//   font-family: inherit;
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: 1.87;
-// }
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+}
 
 %visually-hidden {
   position: absolute;
