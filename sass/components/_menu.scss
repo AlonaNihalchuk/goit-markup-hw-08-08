@@ -27,8 +27,8 @@
     top: 0%;
     left: 0%;
     width: 100%;
-    min-height: 400px;
-    height: 100%;
+    // min-height: 400px;
+    // height: 100%;
 
     &.is-open {
       display: block;
@@ -66,4 +66,74 @@
 
 .menu-button.is-open .icon-menu {
   display: none;
+}
+
+.site-nav {
+  @extend %list;
+  text-align: start;
+  margin-bottom: 302px;
+
+  .item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .link {
+    display: block;
+
+    color: $title-text-color;
+    @extend %mobile-link-font;
+    font-size: 40px;
+    @include transitioned(color);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    &.current {
+      color: $accent-color;
+    }
+  }
+}
+
+.contacts {
+  @extend %list;
+  text-align: start;
+  margin-bottom: 64px;
+
+  .item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &-link {
+    display: block;
+    @extend %mobile-link-font;
+    font-size: 34px;
+
+    // color: $primery-text-color;
+    @include transitioned(color);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    .contacts-icon {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+
+  .icon-between {
+    color: $primery-text-color;
+  }
+
+  .icon-between.accent {
+    color: $accent-color;
+  }
+
+  // &-icon {
+  //   fill: currentColor;
+  // }
 }

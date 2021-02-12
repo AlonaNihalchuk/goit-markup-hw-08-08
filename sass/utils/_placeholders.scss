@@ -21,6 +21,12 @@
 //   letter-spacing: 0.02em;
 // }
 
+%mobile-link-font {
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
 %button {
   display: inline-block;
   border: 1px solid transparent;
