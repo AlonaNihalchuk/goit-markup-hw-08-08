@@ -30,12 +30,16 @@ a {
   display: block;
 }
 
-img,
-svg {
+img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
+// svg {
+//   display: block;
+//   max-width: 100%;
+// }
 
 p {
   margin: 0;

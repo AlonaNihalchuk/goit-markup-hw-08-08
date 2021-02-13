@@ -92,10 +92,13 @@
     display: flex;
     align-items: center;
     outline: 1px solid orange;
-    margin-left: 88px;
+    margin-left: 84px;
     margin-right: 84px;
-    // max-width: 294px;
+    // max-width: 284px;
     // min-height: 48px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 0;
   }
 
   .item {
@@ -166,22 +169,37 @@
       margin-bottom: 32px;
     }
   }
-  @media screen and (min-width: 768px) {
-    outline: 1px solid orange;
-    max-width: 138px;
-    min-height: 38px;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 305px;
+
+    .item + .item {
+      margin-left: 50px;
+    }
   }
+  // nie ydalat
+  // @media screen and (min-width: 768px) {
+  //   display: block;
+  //   outline: 1px solid orange;
+  //   // max-width: 138px;
+  //   // min-height: 38px;
+  // }
 
   &-link {
     display: block;
     @extend %mobile-link-font;
-    // color: $primery-text-color;
+    color: $primery-text-color;
     @include transitioned(color);
     @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
       font-weight: 500;
       font-size: 12px;
       line-height: 0.8;
       letter-spacing: 0.02em;
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
 
     &:hover,
@@ -190,13 +208,15 @@
     }
 
     .contacts-icon {
+      margin-right: 8px;
+      fill: currentColor;
       @media screen and (max-width: 767px) {
         display: none;
       }
     }
 
     .text-between {
-      color: $primery-text-color;
+      // color: $primery-text-color;
       @media screen and (max-width: 767px) {
         font-size: 28px;
       }
