@@ -1,7 +1,29 @@
-.address, .social.list {
+.main-container .buttons, .address, .social.list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.main-container .button {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
+  text-align: center;
+  color: #212121;
+  background-color: #f5f4fa;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 body {
@@ -93,6 +115,39 @@ h3 {
 
 .logo-white {
   color: #ffffff;
+}
+
+.main-container {
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .main-container .buttons {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+}
+
+.main-container .buttons .item {
+  margin: 7px 4px 7px 4px;
+}
+
+.main-container .button {
+  -webkit-transition: color, background-color, -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color, background-color, -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color, background-color, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color, background-color, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-container .button:hover, .main-container .button:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .footer {

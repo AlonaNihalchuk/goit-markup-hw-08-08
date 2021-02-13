@@ -1,59 +1,67 @@
-// .visually-hidden {
-//   @extend %visually-hidden;
-// }
+.visually-hidden {
+  @extend %visually-hidden;
+}
 
-// .main-container {
-//   @extend %container;
-//   @extend %padding-top-bottom;
-//   background-color: $hero-color;
+.main-container {
+  //   @extend %container;
+  //   @extend %padding-top-bottom;
+  background-color: $hero-color;
 
-//   .buttons {
-//     display: flex;
-//     justify-content: center;
-//     margin-bottom: 50px;
-//     @extend %list;
+  .buttons {
+    @extend %list;
+    // justify-content: center;
 
-//     .item + .item {
-//       margin-left: 8px;
-//     }
-//   }
+    @media screen and (max-width: 767px) {
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
 
-//   .button {
-//     @extend %button;
-//     @include transitioned(color);
-//     @include transitioned(background-color);
-//     @include transitioned(box-shadow);
+    .item {
+      margin: 7px 4px 7px 4px;
+    }
 
-//     &:hover,
-//     &:focus {
-//       color: $hero-color;
-//       background-color: $accent-color;
-//       box-shadow: $box-shadow;
-//     }
-//   }
+    // .item + .item {
+    //   margin-left: 8px;
+    // }
+  }
 
-//   .first {
-//     min-width: 73px;
-//     @extend %button;
-//   }
+  .button {
+    @extend %button;
+    @include transitioned(color, background-color, box-shadow);
+    // @include transitioned(background-color);
+    // @include transitioned(box-shadow);
 
-//   .second {
-//     min-width: 128px;
-//     @extend %button;
-//   }
+    &:hover,
+    &:focus {
+      color: $hero-color;
+      background-color: $accent-color;
+      box-shadow: $box-shadow;
+    }
+  }
 
-//   .third {
-//     min-width: 145px;
-//     @extend %button;
-//   }
+  //   .first {
+  //     min-width: 73px;
+  //     @extend %button;
+  //   }
 
-//   .fourth {
-//     min-width: 103px;
-//     @extend %button;
-//   }
+  //   .second {
+  //     min-width: 128px;
+  //     @extend %button;
+  //   }
 
-//   .fifth {
-//     min-width: 130px;
-//     @extend %button;
-//   }
-// }
+  //   .third {
+  //     min-width: 145px;
+  //     @extend %button;
+  //   }
+
+  //   .fourth {
+  //     min-width: 103px;
+  //     @extend %button;
+  //   }
+
+  //   .fifth {
+  //     min-width: 130px;
+  //     @extend %button;
+  //   }
+}
