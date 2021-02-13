@@ -11,7 +11,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/backgroung-image.jpg);
+    url(../images/header-img.480.400.jpg);
 
   text-align: center;
 
@@ -26,6 +26,12 @@
     line-height: 1.6;
     text-align: center;
     letter-spacing: 0.06em;
+  }
+}
+
+@media screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  box {
+    background-image: url(../image/header-img.480.400@2x.jpg);
   }
 }
 
