@@ -214,12 +214,30 @@ h3 {
   background-color: var(--hero-color);
 }
 
+@media screen and (min-width: 768px) {
+  .features .list-positioned {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
 .features .item {
   border-radius: 4px;
 }
 
 .features .item:not(:last-child) {
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .features .item {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
 }
 
 .features .icon-background {
@@ -244,7 +262,7 @@ h3 {
   padding-top: 30px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .activities {
     display: none;
   }
@@ -262,6 +280,23 @@ h3 {
   line-height: 1.17;
 }
 
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team-list .item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 .team-list .item {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -269,8 +304,11 @@ h3 {
   border-radius: 4px;
 }
 
-.team-list .item:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .team-list .item {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
 }
 
 .item-container {
@@ -359,6 +397,12 @@ h3 {
 .item-clients {
   width: calc((100% - 60px) / 2);
   margin: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .item-clients {
+    width: calc((100% - 90px) / 3);
+  }
 }
 
 .item-clients .icon {
@@ -822,6 +866,10 @@ h3 {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.cards {
+  z-index: -1;
+}
+
 @media screen and (min-width: 768px) {
   .cards {
     display: -webkit-box;
@@ -925,7 +973,7 @@ h3 {
     top: 0%;
     left: 0%;
     width: 100%;
-    height: auto;
+    height: 100vw;
   }
   .menu-container.is-open {
     display: block;
@@ -984,7 +1032,6 @@ h3 {
 @media screen and (max-width: 767px) {
   .site-nav {
     text-align: start;
-    margin-bottom: 302px;
   }
   .site-nav .item:not(:last-child) {
     margin-bottom: 32px;

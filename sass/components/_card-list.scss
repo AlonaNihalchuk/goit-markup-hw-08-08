@@ -1,4 +1,5 @@
 .cards {
+  z-index: -1;
   @extend %list;
 
   @media screen and (min-width: 768px) {
