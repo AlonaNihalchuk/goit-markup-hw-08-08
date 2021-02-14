@@ -24,6 +24,8 @@
   border: 1px solid $backdrop-color;
   background-color: $hero-color;
   background-size: contain;
+  background-repeat: no-repeat;
+
   @include transitioned(color);
 
   &:hover,
