@@ -108,13 +108,8 @@ h3 {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  margin-bottom: 20px;
   color: #2196f3;
-}
-
-@media screen and (max-width: 767px) {
-  .logo {
-    margin-bottom: 20px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -310,8 +305,62 @@ h3 {
 }
 
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #2f303a;
-  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .subscribe-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.tablet-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+@media screen and (max-width: 768px) {
+  .tablet-footer {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .tablet-footer {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-right: 74px;
+    padding-left: 61px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tablet-footer {
+    margin-right: 93px;
+  }
 }
 
 .information {
@@ -330,7 +379,12 @@ h3 {
 
 .telefon {
   color: rgba(255, 255, 255, 0.6);
-  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 1199px) {
+  .telefon {
+    margin-bottom: 60px;
+  }
 }
 
 .telefon:hover, .telefon:focus {
@@ -352,6 +406,10 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 60px;
+}
+
+.footer-contacts {
+  margin-right: 70px;
 }
 
 .social-item + .social-item {
@@ -392,12 +450,25 @@ h3 {
 .subscribe-input {
   width: 100%;
   padding: 15px 16px;
-  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 0px 4px 4px 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: #2f303a;
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe-input {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-input {
+    margin-right: 12px;
+    width: 358px;
+    min-height: 50px;
+  }
 }
 
 .subscribe-input::-webkit-input-placeholder {
@@ -447,6 +518,13 @@ h3 {
   padding-bottom: 10px;
   padding-left: 29px;
   text-align: start;
+}
+
+@media screen and (min-width: 1200px) {
+  .button-container .subscribe-button {
+    width: 200px;
+    height: 50px;
+  }
 }
 
 .button-container .subscribe-icon {
