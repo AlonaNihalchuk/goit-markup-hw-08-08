@@ -32,6 +32,7 @@
   border-radius: 50%;
   border: 1px solid $backdrop-color;
   background-color: $hero-color;
+  background-size: cover;
   @include transitioned(color);
 
   &:hover,
