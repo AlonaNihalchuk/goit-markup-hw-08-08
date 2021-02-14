@@ -59,6 +59,10 @@ body.is-open {
   overflow: hidden;
 }
 
+body.is-open {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   display: block;
@@ -1237,7 +1241,6 @@ h3 {
 
 .menu-container {
   z-index: 1;
-  outline: 1px solid green;
   background-color: #ffffff;
   text-align: center;
   font-size: 40px;
@@ -1334,7 +1337,6 @@ h3 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    outline: 1px solid orange;
     margin-left: 84px;
     margin-right: 84px;
   }
@@ -1528,7 +1530,6 @@ h3 {
 }
 
 .container {
-  outline: 1px solid red;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;

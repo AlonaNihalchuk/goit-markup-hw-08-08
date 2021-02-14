@@ -4,16 +4,6 @@
   border-bottom: 1px solid $button-color;
 }
 
-// @media screen and (min-width: 1200px) {
-//   .header-container {
-//     max-width: 1170px;
-//     padding-left: 15px;
-//     padding-right: 15px;
-//     margin-left: auto;
-//     margin-right: auto;
-//   }
-// }
-
 .nav-container {
   display: flex;
   align-items: center;
@@ -26,15 +16,3 @@
     min-height: 60px;
   }
 }
-
-// .site-nav {
-//   @media screen and (max-width: 1199px) {
-//     display: none;
-//   }
-// }
-
-// .contacts {
-//   @media screen and (max-width: 1199px) {
-//     display: none;
-//   }
-// }

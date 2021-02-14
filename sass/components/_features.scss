@@ -25,20 +25,11 @@
     @media screen and (min-width: 1200px) {
       display: flex;
       margin: -15px;
-      // justify-content: center;
-      // align-items: center;
-      // .item + .item {
-      //   margin-left: 30px;
-      // }
     }
   }
 
   .item {
     border-radius: 4px;
-
-    // &:not(:last-child) {
-    //   margin-bottom: 30px;
-    // }
 
     @media screen and (min-width: 768px) {
       width: calc((100% - 60px) / 2);
@@ -50,7 +41,6 @@
       justify-content: center;
       align-items: center;
       width: calc(100% - 120px / 4);
-      // margin: 0;
     }
   }
 
@@ -64,9 +54,6 @@
 
     @media screen and (min-width: 1200px) {
       max-width: 270px;
-      // min-height: 120px;
-      // margin: 0;
-      // width: 100%;
     }
   }
 }
@@ -79,48 +66,3 @@
   line-height: 1.14;
   padding-top: 30px;
 }
-
-// .features {
-//   @extend %padding-top-bottom;
-//   background-color: var(--hero-color);
-
-//   .container {
-//     @extend %container;
-//   }
-
-//   .visually-hidden {
-//     @extend %visually-hidden;
-//   }
-
-//   .list {
-//     display: flex;
-//     width: 1170px;
-//     @extend %list;
-
-//     .item + .item {
-//       margin-left: 30px;
-//     }
-//   }
-
-//   .item {
-//     @include display(block);
-//     width: calc(100% - 90px / 4);
-//     border-radius: 4px;
-//   }
-
-//   .icon-background {
-//     @include display();
-//     width: 270px;
-//     height: 120px;
-//     background-color: $last-background-color;
-//   }
-
-//   .features-title {
-//     color: $title-text-color;
-
-//     font-weight: 700;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     padding-top: 30px;
-//   }
-// }

@@ -3,8 +3,6 @@
 }
 
 .main-container {
-  //   @extend %container;
-  //   @extend %padding-top-bottom;
   background-color: $hero-color;
 
   .buttons {
@@ -42,8 +40,6 @@
   .button {
     @extend %button;
     @include transitioned(color, background-color, box-shadow);
-    // @include transitioned(background-color);
-    // @include transitioned(box-shadow);
 
     &:hover,
     &:focus {
@@ -52,29 +48,4 @@
       box-shadow: $box-shadow;
     }
   }
-
-  //   .first {
-  //     min-width: 73px;
-  //     @extend %button;
-  //   }
-
-  //   .second {
-  //     min-width: 128px;
-  //     @extend %button;
-  //   }
-
-  //   .third {
-  //     min-width: 145px;
-  //     @extend %button;
-  //   }
-
-  //   .fourth {
-  //     min-width: 103px;
-  //     @extend %button;
-  //   }
-
-  //   .fifth {
-  //     min-width: 130px;
-  //     @extend %button;
-  //   }
 }

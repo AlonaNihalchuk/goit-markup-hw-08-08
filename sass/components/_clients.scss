@@ -35,22 +35,6 @@
     fill: currentColor;
   }
 }
-// .clients {
-//   @extend %padding-top-bottom;
-
-//   .container {
-//     @extend %container;
-//   }
-
-//   .heading-clients {
-//     @extend %h2;
-//     @extend %h1-3;
-//   }
-// }
-
-// .list-clients {
-//   display: flex;
-//   @extend %list;
 
 .link-clients {
   @include display();

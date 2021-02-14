@@ -1,6 +1,6 @@
 .menu-container {
   z-index: 1;
-  outline: 1px solid green;
+  // outline: 1px solid green;
   background-color: $hero-color;
 
   text-align: center;
@@ -69,8 +69,6 @@
   @media screen and (max-width: 767px) {
     text-align: start;
 
-    // margin-bottom: 302px;
-
     .item:not(:last-child) {
       margin-bottom: 32px;
     }
@@ -78,11 +76,9 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
-    outline: 1px solid orange;
+    // outline: 1px solid orange;
     margin-left: 84px;
     margin-right: 84px;
-    // max-width: 284px;
-    // min-height: 48px;
   }
   @media screen and (min-width: 1200px) {
     margin: 0;
@@ -150,11 +146,6 @@
   @extend %list;
   @media screen and (max-width: 767px) {
     text-align: start;
-    // margin-bottom: 64px;
-
-    // .item:not(:last-child) {
-    //   margin-bottom: 32px;
-    // }
   }
 
   @media screen and (min-width: 1200px) {
@@ -203,7 +194,6 @@
 
     .text-between.accent {
       @media screen and (max-width: 767px) {
-        // color: $accent-color;
         font-size: 28px;
 
         &:hover,
@@ -227,10 +217,6 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
-
-  // &-item:not(:last-child) {
-  //   margin-right: 10px;
-  // }
 
   &-link {
     display: flex;

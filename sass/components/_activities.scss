@@ -19,7 +19,6 @@
 
   .list {
     display: flex;
-    // width: 1170px;
     @extend %list;
 
     .item + .item {
@@ -37,7 +36,6 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    // min-height: 70px;
     padding-top: 27px;
     padding-bottom: 27px;
     text-align: center;
