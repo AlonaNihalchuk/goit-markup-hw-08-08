@@ -15,10 +15,12 @@
       display: inline-flex;
       flex-wrap: wrap;
       margin-bottom: 40px;
-    }
+      margin: -7px -4px;
+      margin-bottom: 40px;
 
-    .item {
-      margin: 7px 4px 7px 4px;
+      .item {
+        margin: 7px 4px;
+      }
     }
 
     // .item + .item {
