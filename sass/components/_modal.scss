@@ -183,9 +183,10 @@
   margin-right: 8px;
   @include transitioned(background-color);
   @include transitioned(border-color);
-  @include transitioned(background-image);
+
   @include transitioned(background-size);
   @include transitioned(border);
+  @include transitioned(background-image);
 }
 
 .form-checkbox:hover + .cheked-icon,
